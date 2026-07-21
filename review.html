@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오브치과 | 치료후기</title>
+  <link rel="stylesheet" href="./style.css?v=review-page-v1">
+  <script defer src="./script.js?v=review-page-v1"></script>
+</head>
+<body>
+  <header class="header_banner" id="siteHeader">
+    <div class="header_in">
+      <a class="logo" href="./index.html" aria-label="오브치과 홈">
+        <img class="logo_img" src="./assets/images/ove_logo.png" alt="오브치과">
+      </a>
+
+      <nav class="nav" id="globalNav" aria-label="주 메뉴">
+        <div class="top_box">
+          <button class="close_btn" id="mobileMenuClose" type="button" aria-label="모바일 메뉴 닫기">
+            <svg viewBox="0 0 384 512" aria-hidden="true">
+              <path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="depth1">
+          <li>
+            <a href="./about.html#clinic"><span>오브치과</span></a>
+            <ul class="depth2">
+              <li><a href="./about.html#clinic">병원소개</a></li>
+              <li><a href="./about.html#doctor">의료진소개</a></li>
+              <li><a href="./about.html#location">오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./implant.html"><span>임플란트</span></a>
+            <ul class="depth2">
+              <li><a href="./implant.html">디지털 임플란트</a></li>
+              <li><a href="./implant.html">전체 임플란트</a></li>
+              <li><a href="./implant.html">임플란트 재수술</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./pros.html"><span>심미보철</span></a>
+            <ul class="depth2">
+              <li><a href="./pros.html">치아미백</a></li>
+              <li><a href="./pros.html">라미네이트</a></li>
+              <li><a href="./pros.html">올세라믹</a></li>
+            </ul>
+          </li>
+          <li class="dir_menu"><a href="./wisdomout.html"><span>사랑니발치</span></a></li>
+          <li>
+            <a href="./toothkeep.html"><span>자연치아보존</span></a>
+            <ul class="depth2">
+              <li><a href="./toothkeep.html">치주치료</a></li>
+              <li><a href="./toothkeep.html">충치치료</a></li>
+              <li><a href="./toothkeep.html">신경치료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./comm.html"><span>커뮤니티</span></a>
+            <ul class="depth2">
+              <li><a href="./comm.html">공지사항</a></li>
+              <li><a href="./review.html">치료후기</a></li>
+              <li><a href="./online.html">온라인상담</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="gnb_bg"></div>
+      </nav>
+
+      <div class="util_wrap">
+        <button type="button" class="util_btn login" data-open-login>로그인</button>
+        <button type="button" class="util_btn join">회원가입</button>
+        <button type="button" class="ham_btn tab_only" id="mobileMenuBtn" aria-label="모바일 메뉴 열기" aria-expanded="false">
+          <svg class="hamIco" height="1em" viewBox="0 0 448 512" aria-hidden="true">
+            <path d="M0 88C0 74.7 10.7 64 24 64h400c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zm0 160c0-13.3 10.7-24 24-24h400c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm448 160c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h400c13.3 0 24 10.7 24 24z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="modal" id="loginBox" aria-hidden="true">
+    <div class="modal_wrap" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <div class="modal_cont member login">
+        <button type="button" class="modal_close" data-close-login aria-label="로그인 닫기"></button>
+        <div class="login_wrap">
+          <p class="tit" id="loginTitle">로그인</p>
+          <div class="input_wrap">
+            <form name="loginForm" id="loginForm">
+              <div class="inp"><input type="text" name="id" placeholder="아이디를 입력해주세요." aria-label="아이디"><span class="ico">ID</span></div>
+              <div class="inp"><input type="password" name="pw" placeholder="비밀번호를 입력해주세요." aria-label="비밀번호"><span class="ico">PW</span></div>
+              <button type="submit">로그인</button>
+            </form>
+          </div>
+          <div class="login_util">
+            <a href="#none">회원가입</a>
+            <a href="#none">아이디 · 비밀번호 찾기</a>
+          </div>
+          <div class="sns_wrap">
+            <div class="sns-bar-box"><span class="sns-bar"></span><h2 class="sns-box-hd">SNS계정으로 로그인</h2><span class="sns-bar"></span></div>
+            <div class="sns_login">
+              <a href="#none" class="naver" id="naverLoginBtn"><span class="sns_icon">N</span><p class="sns-txt">네이버</p></a>
+              <a href="#none" class="kakao" id="kakaoLoginBtn"><span class="sns_icon">TALK</span><p class="sns-txt">카카오톡</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="review_page">
+    <article class="review_hero" id="startContent">
+      <div class="review_hero_inner reveal fade-up">
+        <p>BEFORE &amp; AFTER</p>
+        <h1>치료 전후사진</h1>
+        <span>결과로 증명하는 <br class="m_cont_480">오브치과의 전문성을 직접 확인하세요.</span>
+      </div>
+    </article>
+
+    <article class="review_board" id="href_id">
+      <nav class="review_category" aria-label="치료후기 카테고리">
+        <a class="active" href="#href_id">전체</a>
+        <a href="#href_id">레진 · 심미치료</a>
+        <a href="#href_id">재치료 사례</a>
+        <a href="#href_id">임플란트</a>
+        <a href="#href_id">충치치료</a>
+        <a href="#href_id">사랑니 발치</a>
+      </nav>
+
+      <div class="review_grid">
+        <article class="review_case reveal fade-up">
+          <a href="#href_id" class="review_title"><span>[충치치료]</span> 앞니 변색 치아 신경치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_gzeOTEc7_1d958e1ac73ea65be2754b975e9b3520cd5d16bd.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2020.05.06</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_qtsg8fp7_b443c12a9d5f8231eacadba11eef75f86ef4f81d.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2021.01.16</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="review_case reveal fade-up delay_200">
+          <a href="#href_id" class="review_title"><span>[레진 · 심미치료, 재치료 사례]</span> 레진 파절 재치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_FJ87aHyW_fe50db65a86b4596c49094a5c7650ab192312d31.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2021.01.06</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_qg6Mf057_acba2831b47d03e375aa18b1eafe5a3b28652407.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2021.02.04</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="review_case reveal fade-up delay_300">
+          <a href="#href_id" class="review_title"><span>[임플란트]</span> 전치부 임플란트 치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_3ZJzK465_796596a3c30149af0c464dd3d9c8d28e23015cb0.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2020.04.02</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_VwhlGruF_1c431e1212bc84759beae6e729ddcd0ab0f6fe05.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2020.07.24</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="review_case reveal fade-up delay_400">
+          <a href="#href_id" class="review_title"><span>[임플란트]</span> 구치부 임플란트 치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_TgNaiJIz_13928f9eb3b3cdfed94ea690e7e276a2da2a2254.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2021.06.15</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_ZSWfjxGF_5cb6c3b9f9c661af317e062a2f1f22adfcbdebab.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2021.09.23</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="review_case reveal fade-up delay_500">
+          <a href="#href_id" class="review_title"><span>[레진 · 심미치료]</span> 앞니 레진치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_fgdkY5Zw_536399f92baa66dd13cc20a9126b0050ca14203b.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2021.06.30</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_YTujcQ7z_5b2e17fe617ea58751d9d1a08928464ec261d98b.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2021.06.30</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="review_case reveal fade-up delay_300">
+          <a href="#href_id" class="review_title"><span>[레진 · 심미치료, 재치료 사례]</span> 레진 재치료</a>
+          <div class="review_item_box">
+            <a href="#href_id">
+              <div class="review_ba_img review_before_img">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_c91Rpo8S_b7eb98cf17eb5f6448fd09d9f0262c8a6a6e3478.jpg" width="320" height="222" alt="치료 전 사진">
+                <p><span>BEFORE</span><span>2020.12.23</span></p>
+              </div>
+              <div class="review_ba_img review_after_img blur">
+                <img src="./assets/images/df8dad74ba033b78a7246af8f41e315c_dacevTrU_9d0129aea6a7f938be5601dd554c54598d0c00c9.jpg" width="320" height="222" alt="치료 후 사진">
+                <p><span>AFTER</span><span>2021.01.20</span></p>
+                <div class="blur_txt_wrap"><div class="blur_txt"><img src="./assets/images/lock_icon_w.png" alt=""><span>로그인 후 볼 수 있습니다.</span></div></div>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="review_notice reveal fade-up">
+        <span class="check_icon2" aria-hidden="true"></span>
+        <p>모든 치료사례 전후사진은 환자분의 동의하에 촬영되었습니다.</p>
+        <p>모든 사진은 동일 환자분의 전후 모습을 촬영한 것이며, 사진의 밝기 조절 외 임의 보정은 하지 않았습니다.</p>
+        <p>치료 결과와 회복 양상은 개인마다 다를 수 있으므로 충분한 상담 후 치료가 진행됩니다.</p>
+      </div>
+
+      <nav class="review_pagination" aria-label="치료후기 페이지">
+        <strong>1</strong>
+        <a href="#href_id">2</a>
+        <a href="#href_id">마지막</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer_in">
+      <div class="footer_cont_box">
+        <div class="footer_logo"><img class="footer_logo_img" src="./assets/images/ove_logo.png" alt="오브치과"></div>
+        <div class="footer_txt_box"><div class="footer_top_txt"><a href="./privacy.html"><strong>개인정보처리방침</strong></a><a href="./terms.html">이용약관</a><a href="./rights.html">환자권리장전</a><a href="./about.html#location">오시는 길</a></div><div class="footer_bot_txt"><span>오브치과</span><span class="line">서울특별시 금천구 가산디지털2로 70 대륭테크노타운19차</span><br><span>대표자 안준성</span><span class="line">사업자번호 225-50-00846</span><span class="line">문의 010. 3018. 1144</span><p class="copy_txt">© 2026 오브치과.</p></div></div>
+        <div class="footer_right_box"><a href="#none" class="ico">blog</a><a href="#none" class="ico">▶</a><a href="#none" class="ico">◎</a><a href="#none" class="ico">talk</a></div>
+      </div>
+    </div>
+    <div class="fix_btn_box">
+      <div class="menu_btn_box">
+        <div class="menu_box"><ul class="naver_active"><li><a href="tel:01030181144" class="btn"><span class="ico">☎</span><span>전화문의</span></a></li><li><a href="./about.html#location" class="btn"><span class="ico">⌖</span><span>오시는길</span></a></li><li><a href="./online.html" class="btn"><span class="ico">⌕</span><span>온라인상담</span></a></li><li><a href="#none" class="btn"><span class="ico talk">T</span><span>카카오상담</span></a></li></ul></div>
+      </div>
+    </div>
+    <div class="top_btn_box"><button type="button" class="top_btn" aria-label="상단으로 이동">↑</button></div>
+  </footer>
+
+  <div class="quick_wrap top open pc_cont_960 scrolled" id="quick">
+    <div class="quick_menu_wrap" id="quick_menu_wrap">
+      <ul class="quick_menu" aria-label="빠른 메뉴">
+        <li class="quick_menu_list quick_menu_li_reserve"><a href="./online.html"><i class="quick_icon quick_icon_reserve" aria-hidden="true"></i><div class="quick_text_box"><p>진료예약</p></div></a></li>
+        <li class="quick_menu_list quick_menu_li_youtube"><a href="./comm.html"><i class="quick_icon quick_icon_youtube" aria-hidden="true"></i><div class="quick_text_box"><p>유튜브</p></div></a></li>
+        <li class="quick_menu_list quick_menu_li_kakao"><a href="./online.html"><i class="quick_icon quick_icon_kakao" aria-hidden="true"></i><div class="quick_text_box"><p>카톡상담</p></div></a></li>
+        <li class="quick_menu_list quick_menu_li_blog"><a href="./comm.html"><i class="quick_icon quick_icon_blog" aria-hidden="true"></i><div class="quick_text_box"><p>블로그</p></div></a></li>
+        <li class="quick_menu_list quick_menu_li_phone"><a href="tel:01030181144"><i class="quick_icon quick_icon_phone" aria-hidden="true"></i><div class="quick_text_box"><p>전화안내</p></div></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
